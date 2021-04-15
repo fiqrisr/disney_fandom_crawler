@@ -9,6 +9,9 @@ from scrapy import Item, Field, item
 class Character(Item):
     name = Field()
     thumbnail = Field()
+    url = Field()
+    feature_films = Field()
+    short_films = Field()
 
 
 class Location(Item):
