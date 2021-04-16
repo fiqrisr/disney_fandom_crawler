@@ -3,7 +3,8 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 
-import json
+from scrapy.exporters import JsonItemExporter
+import os
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
@@ -11,14 +12,17 @@ from itemadapter import ItemAdapter
 
 class JsonWriterPipeline:
     def open_spider(self, spider):
-        self.file = open("%s.json" % spider.name, "w")
-        self.file.write("[\n")
+        if not os.path.exists("output/%s" % spider.name):
+            os.system("mkdir -p output/%s" % spider.name)
+
+        self.file = open("output/%s/out.json" % spider.name, "w+b")
+        self.exporter = JsonItemExporter(self.file)
+        self.exporter.start_exporting()
 
     def close_spider(self, spider):
-        self.file.write("]\n")
+        self.exporter.finish_exporting()
         self.file.close()
 
     def process_item(self, item, spider):
-        line = json.dumps(dict(item)) + ",\n"
-        self.file.write(line)
+        self.exporter.export_item(item)
         return item
