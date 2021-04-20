@@ -20,7 +20,7 @@ class Character(Item):
     designer = Field()
     voice = Field()
     portrayed_by = Field()
-    perfomance_model = Field()
+    performance_model = Field()
     inspiration = Field()
     awards = Field()
     fullname = Field()

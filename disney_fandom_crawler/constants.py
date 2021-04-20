@@ -20,6 +20,22 @@ selectors = {
     "CHARACTER_PERFORMANCE_MODEL": "div[data-source=model] div.pi-data-value > i > a::text",
     "CHARACTER_INSPIRATION": "div[data-source=inspiration] div.pi-data-value > i > a::text",
     "CHARACTER_AWARDS": "div[data-source=awards] div.pi-data-value > i > a::text",
+    "CHARACTER_FULLNAME": "div[data-source=fullname] div.pi-data-value > i > a::text",
+    "CHARACTER_OTHER_NAMES": "div[data-source=alias] div.pi-data-value > i > a::text",
+    "CHARACTER_OCCUPATION": "div[data-source=occupation] div.pi-data-value > i > a::text",
+    "CHARACTER_AFFILIATIONS": "div[data-source=affiliations] div.pi-data-value > i > a::text",
+    "CHARACTER_HOME": "div[data-source=home] div.pi-data-value > i > a::text",
+    "CHARACTER_LIKES": "div[data-source=likes] div.pi-data-value > i > a::text",
+    "CHARACTER_DISLIKES": "div[data-source=dislikes] div.pi-data-value > i > a::text",
+    "CHARACTER_POWERS": "div[data-source=powers] div.pi-data-value > i > a::text",
+    "CHARACTER_PARAPHERNALIA": "div[data-source=paraphernalia] div.pi-data-value > i > a::text",
+    "CHARACTER_STATUS": "div[data-source=status] div.pi-data-value > i > a::text",
+    "CHARACTER_PARENTS": "div[data-source=parents] div.pi-data-value > i > a::text",
+    "CHARACTER_SIBLINGS": "div[data-source=siblings] div.pi-data-value > i > a::text",
+    "CHARACTER_FAMILY": "div[data-source=family] div.pi-data-value > i > a::text",
+    "CHARACTER_PARTNER": "div[data-source=partner] div.pi-data-value > i > a::text",
+    "CHARACTER_CHILDREN": "div[data-source=children] div.pi-data-value > i > a::text",
+    "CHARACTER_PETS": "div[data-source=pets] div.pi-data-value > i > a::text",
 }
 
 characters_string_skip_list = [
